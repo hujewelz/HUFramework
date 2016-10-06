@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  HUFramework: ca91307744effd3ad08ad4795cd916c39e67cc8a
+  HUFramework: ab8178367366ae198f3b59f147136c7798d0669a
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
 

@@ -28,6 +28,5 @@ Jewelz Hu, hujewelz@163.com
 ## License
 
 HUFramework is available under the MIT license. See the LICENSE file for more info.
-=======
-HUFramework using cocopods
+
 

@@ -15,7 +15,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        Bundle.bundle(forClass: ViewController.self)
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let vc = HUFramework.instantiateInitialViewController() {
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {

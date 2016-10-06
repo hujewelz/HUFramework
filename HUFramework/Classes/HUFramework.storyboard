@@ -1,27 +1,96 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6n3-4x-Dqk">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="Mm0-v7-DBz">
+        <!--Navigation Controller-->
+        <scene sceneID="VYV-TX-15g">
             <objects>
-                <viewController id="Cu7-Hc-uWh" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MYG-GE-88D"/>
-                        <viewControllerLayoutGuide type="bottom" id="aiu-S1-3zG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ozv-zr-08s">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6n3-4x-Dqk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EnG-4y-ZrJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MJM-mb-5ka" kind="relationship" relationship="rootViewController" id="Bae-U3-M7m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DHH-mX-GG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="433"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="ws9-Ma-gVj">
+            <objects>
+                <tableViewController id="MJM-mb-5ka" customClass="HomeViewController" customModule="HUFramework" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="47" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rgq-gr-iEP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="47" id="sRK-Py-lpa">
+                                <rect key="frame" x="0.0" y="92" width="375" height="47"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sRK-Py-lpa" id="RAX-4O-Siz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="AwZ-4p-5Wa" kind="push" identifier="DetailViewController" id="arq-QR-YvY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MJM-mb-5ka" id="Hmq-7B-eXs"/>
+                            <outlet property="delegate" destination="MJM-mb-5ka" id="oaY-yc-j7x"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Home" id="iOo-lB-ozA"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g7J-Cf-rww" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r1W-gt-pdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="542" y="433"/>
+            <point key="canvasLocation" x="1012.5" y="432.5"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="vaZ-9w-A7u">
+            <objects>
+                <viewController id="AwZ-4p-5Wa" customClass="DetailViewController" customModule="HUFramework" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8kZ-d9-mro"/>
+                        <viewControllerLayoutGuide type="bottom" id="ezE-ok-upW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rnO-8K-fNX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="33F-Mq-TaE">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="33F-Mq-TaE" secondAttribute="trailing" id="DcL-Uc-BwV"/>
+                            <constraint firstItem="33F-Mq-TaE" firstAttribute="leading" secondItem="rnO-8K-fNX" secondAttribute="leading" id="fGh-8O-Hb2"/>
+                            <constraint firstItem="33F-Mq-TaE" firstAttribute="top" secondItem="8kZ-d9-mro" secondAttribute="bottom" id="hfB-S6-R1l"/>
+                            <constraint firstItem="ezE-ok-upW" firstAttribute="top" secondItem="33F-Mq-TaE" secondAttribute="bottom" id="oPm-ix-3bO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mwH-US-E0z"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="webView" destination="33F-Mq-TaE" id="yE1-Wo-uzq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ptR-db-UYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1488.5" y="432.5"/>
         </scene>
     </scenes>
 </document>

@@ -1,0 +1,6 @@
+framework module HUFramework {
+  umbrella header "HUFramework-umbrella.h"
+
+  export *
+  module * { export * }
+}
