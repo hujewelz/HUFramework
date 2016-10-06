@@ -1,0 +1,22 @@
+PODS:
+  - HUFramework (0.1.0)
+  - Nimble (3.2.0)
+  - Quick (0.9.3)
+
+DEPENDENCIES:
+  - HUFramework (from `../`)
+  - Nimble (~> 3.0)
+  - Quick (~> 0.8)
+
+EXTERNAL SOURCES:
+  HUFramework:
+    :path: ../
+
+SPEC CHECKSUMS:
+  HUFramework: ca91307744effd3ad08ad4795cd916c39e67cc8a
+  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
+
+PODFILE CHECKSUM: d05a0d7f9c96c47271edf3ff3fc0130401d905c4
+
+COCOAPODS: 1.0.1

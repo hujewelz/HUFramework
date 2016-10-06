@@ -30,13 +30,13 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'HUFramework/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'HUFramework' => ['HUFramework/Assets/*.png']
-  # }
+  s.source_files = 'HUFramework/Classes/**/*.{swift}'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.resource_bundles = {
+     'HUFramework' => ['HUFramework/Assets/*.png', 'HUFramework/Classes/**/*{storyboard,xib,json}]
+  }
+
+  # s.public_header_files = 'HUFramework/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
